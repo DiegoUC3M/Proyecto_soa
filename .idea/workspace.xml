@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Proyecto_soa" targetName="Proyecto_soa" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1zlTBMMxn0b6vTw9R7WUseLERyW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="ObjectiveC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Proyecto_soa" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="100 3 23 44 0.01" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_soa" TARGET_NAME="Proyecto_soa" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_soa" RUN_TARGET_NAME="Proyecto_soa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="" />
+      <created>1634721540169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634721540169</updated>
+      <workItem from="1634721548246" duration="44247000" />
+      <workItem from="1634806814238" duration="4215000" />
+      <workItem from="1634811151044" duration="101000" />
+      <workItem from="1634811265152" duration="21000" />
+      <workItem from="1634811302825" duration="2911000" />
+      <workItem from="1634814224388" duration="9809000" />
+      <workItem from="1634851616639" duration="5058000" />
+      <workItem from="1634859547848" duration="12239000" />
+      <workItem from="1634871812924" duration="91000" />
+      <workItem from="1634896719147" duration="9407000" />
+      <workItem from="1634906377792" duration="4468000" />
+      <workItem from="1634915033264" duration="1182000" />
+      <workItem from="1634985646467" duration="5112000" />
+      <workItem from="1634992026923" duration="1375000" />
+      <workItem from="1634999569949" duration="9663000" />
+      <workItem from="1635030908902" duration="4176000" />
+      <workItem from="1635081422356" duration="5856000" />
+      <workItem from="1635090128931" duration="200000" />
+      <workItem from="1635091734145" duration="1355000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sim-soa.cpp</url>
+          <line>198</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/sim-soa.cpp</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="fuerza.x[1]" language="ObjectiveC" />
+        <watch expression="objetos.position_x[j]" />
+        <watch expression="objetos.position_y[j]" />
+        <watch expression="objetos.position_z[j]" />
+        <watch expression="objetos.position_x[k]" language="ObjectiveC" />
+        <watch expression="objetos.position_y[k]" />
+        <watch expression="objetos.position_z[k]" />
+        <watch expression="norma" language="ObjectiveC" />
+        <watch expression="objetos.position_x[8]" language="ObjectiveC" />
+        <watch expression="objetos.masa[8]" language="ObjectiveC" />
+        <watch expression="objetos.masa[a+1]" />
+        <watch expression="objetos.masa[j]" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

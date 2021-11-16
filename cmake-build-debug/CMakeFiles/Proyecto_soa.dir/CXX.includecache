@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.cpp
+iostream
+-
+cmath
+-
+iomanip
+-
+sim-soa.hpp
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.hpp
+calculations.hpp
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.hpp
+
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.hpp
+fstream
+-
+
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.cpp
+iostream
+-
+random
+-
+fstream
+-
+iomanip
+-
+sim-soa.hpp
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.hpp
+calculations.hpp
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.hpp
+
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.hpp
+

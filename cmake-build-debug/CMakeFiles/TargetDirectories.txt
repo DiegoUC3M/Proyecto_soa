@@ -1,0 +1,3 @@
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-debug/CMakeFiles/Proyecto_soa.dir
