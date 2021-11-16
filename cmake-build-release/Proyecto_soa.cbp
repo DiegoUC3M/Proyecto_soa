@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release"/>
+				<Option working_dir="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release"/>
+				<Option working_dir="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release"/>
+				<Option working_dir="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto_soa">
-				<Option output="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Proyecto_soa" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release"/>
+				<Option output="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Proyecto_soa" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 Proyecto_soa"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 Proyecto_soa"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto_soa/fast">
-				<Option output="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Proyecto_soa" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release"/>
+				<Option output="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Proyecto_soa" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,26 +75,26 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 Proyecto_soa/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 Proyecto_soa/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.cpp">
+		<Unit filename="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/calculations.cpp">
 			<Option target="Proyecto_soa"/>
 		</Unit>
-		<Unit filename="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.hpp">
+		<Unit filename="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/calculations.hpp">
 			<Option target="Proyecto_soa"/>
 		</Unit>
-		<Unit filename="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.cpp">
+		<Unit filename="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/sim-soa.cpp">
 			<Option target="Proyecto_soa"/>
 		</Unit>
-		<Unit filename="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.hpp">
+		<Unit filename="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/sim-soa.hpp">
 			<Option target="Proyecto_soa"/>
 		</Unit>
-		<Unit filename="/home/diego/Documentos/ProyectoArqui/Proyecto_soa/CMakeLists.txt">
+		<Unit filename="/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

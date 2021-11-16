@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.cpp" "/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-debug/CMakeFiles/Proyecto_soa.dir/calculations.cpp.o"
-  "/home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.cpp" "/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-debug/CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o"
+  "/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/calculations.cpp" "/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-debug/CMakeFiles/Proyecto_soa.dir/calculations.cpp.o"
+  "/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/sim-soa.cpp" "/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-debug/CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

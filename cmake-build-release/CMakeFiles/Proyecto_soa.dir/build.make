@@ -53,10 +53,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diego/Documentos/ProyectoArqui/Proyecto_soa
+CMAKE_SOURCE_DIR = /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release
+CMAKE_BINARY_DIR = /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Proyecto_soa.dir/depend.make
@@ -68,29 +68,29 @@ include CMakeFiles/Proyecto_soa.dir/flags.make
 
 CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o: CMakeFiles/Proyecto_soa.dir/flags.make
 CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o: ../sim-soa.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o -c /home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o -c /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/sim-soa.cpp
 
 CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.cpp > CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/sim-soa.cpp > CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.i
 
 CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documentos/ProyectoArqui/Proyecto_soa/sim-soa.cpp -o CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/sim-soa.cpp -o CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.s
 
 CMakeFiles/Proyecto_soa.dir/calculations.cpp.o: CMakeFiles/Proyecto_soa.dir/flags.make
 CMakeFiles/Proyecto_soa.dir/calculations.cpp.o: ../calculations.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Proyecto_soa.dir/calculations.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proyecto_soa.dir/calculations.cpp.o -c /home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Proyecto_soa.dir/calculations.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proyecto_soa.dir/calculations.cpp.o -c /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/calculations.cpp
 
 CMakeFiles/Proyecto_soa.dir/calculations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proyecto_soa.dir/calculations.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.cpp > CMakeFiles/Proyecto_soa.dir/calculations.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/calculations.cpp > CMakeFiles/Proyecto_soa.dir/calculations.cpp.i
 
 CMakeFiles/Proyecto_soa.dir/calculations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proyecto_soa.dir/calculations.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documentos/ProyectoArqui/Proyecto_soa/calculations.cpp -o CMakeFiles/Proyecto_soa.dir/calculations.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/calculations.cpp -o CMakeFiles/Proyecto_soa.dir/calculations.cpp.s
 
 # Object files for target Proyecto_soa
 Proyecto_soa_OBJECTS = \
@@ -104,7 +104,7 @@ Proyecto_soa: CMakeFiles/Proyecto_soa.dir/sim-soa.cpp.o
 Proyecto_soa: CMakeFiles/Proyecto_soa.dir/calculations.cpp.o
 Proyecto_soa: CMakeFiles/Proyecto_soa.dir/build.make
 Proyecto_soa: CMakeFiles/Proyecto_soa.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Proyecto_soa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Proyecto_soa"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Proyecto_soa.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -116,6 +116,6 @@ CMakeFiles/Proyecto_soa.dir/clean:
 .PHONY : CMakeFiles/Proyecto_soa.dir/clean
 
 CMakeFiles/Proyecto_soa.dir/depend:
-	cd /home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/diego/Documentos/ProyectoArqui/Proyecto_soa /home/diego/Documentos/ProyectoArqui/Proyecto_soa /home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release /home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release /home/diego/Documentos/ProyectoArqui/Proyecto_soa/cmake-build-release/CMakeFiles/Proyecto_soa.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release /home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-release/CMakeFiles/Proyecto_soa.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Proyecto_soa.dir/depend
 

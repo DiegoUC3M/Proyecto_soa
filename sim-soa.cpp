@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include <fstream>
+#include <omp.h>
 #include <iomanip> /*Librería para ajustar la precision*/
 #include "sim-soa.hpp"
 #include "calculations.hpp"
@@ -143,25 +144,26 @@ int main(int argc, char *argv[]) {
 
     //CREAMOS OBJETO E INICIALIZAMOS CON MALLOC LOS ARRAYS CON SIZE = NUM_OBJETOS
     object objetos;
-        objetos.position_x=(double *) malloc (num_objetos * sizeof(double));
-        objetos.position_y=(double *) malloc (num_objetos * sizeof(double));
-        objetos.position_z=(double *) malloc (num_objetos * sizeof(double));
-        objetos.speed_x=(double *) malloc (num_objetos * sizeof(double));
-        objetos.speed_y=(double *) malloc (num_objetos * sizeof(double));
-        objetos.speed_z=(double *) malloc (num_objetos * sizeof(double));
-        objetos.masa =(double *) malloc (num_objetos * sizeof(double));
+    objetos.position_x=(double *) malloc (num_objetos * sizeof(double));
+    objetos.position_y=(double *) malloc (num_objetos * sizeof(double));
+    objetos.position_z=(double *) malloc (num_objetos * sizeof(double));
+    objetos.speed_x=(double *) malloc (num_objetos * sizeof(double));
+    objetos.speed_y=(double *) malloc (num_objetos * sizeof(double));
+    objetos.speed_z=(double *) malloc (num_objetos * sizeof(double));
+    objetos.masa =(double *) malloc (num_objetos * sizeof(double));
 
 
     vec fuerza;
-        fuerza.x = (double *) malloc (num_objetos * sizeof(double));
-        fuerza.y = (double *) malloc (num_objetos * sizeof(double));
-        fuerza.z = (double *) malloc (num_objetos * sizeof(double));
+    fuerza.x = (double *) malloc (num_objetos * sizeof(double));
+    fuerza.y = (double *) malloc (num_objetos * sizeof(double));
+    fuerza.z = (double *) malloc (num_objetos * sizeof(double));
 
 
     vec aceleracion;
-        aceleracion.x = (double *) malloc (num_objetos * sizeof(double));
-        aceleracion.y = (double *) malloc (num_objetos * sizeof(double));
-        aceleracion.z = (double *) malloc (num_objetos * sizeof(double));
+    aceleracion.x = (double *) malloc (num_objetos * sizeof(double));
+    aceleracion.y = (double *) malloc (num_objetos * sizeof(double));
+    aceleracion.z = (double *) malloc (num_objetos * sizeof(double));
+
 
 
     //INICIALIZACIÓN PARA LOS DATOS ALEATORIOS
@@ -212,12 +214,12 @@ int main(int argc, char *argv[]) {
 
 
 
-
     //********CALCULAMOS LAS FUERZAS, ACELERACIONES, VELOCIDADES Y POSICIONES DE TODOS LOS CUERPOS***********
 
     for (int i = 0; i < num_iteraciones; i++) {
         //ES NECESARIO INICIALIZAR LAS FUERZAS A CERO EN CADA NUEVA ITERACION, PARA QUE NO SE SUMEN LAS FUERZAS DE LAS ITERACIONES ANTERIORES EN NUEVAS ITERACIONES
-        for (int j=0; j < num_objetos; j++){
+#pragma omp parallel for
+        for (int j = 0; j < num_objetos; j++) {
             fuerza.x[j] = 0;
             fuerza.y[j] = 0;
             fuerza.z[j] = 0;
