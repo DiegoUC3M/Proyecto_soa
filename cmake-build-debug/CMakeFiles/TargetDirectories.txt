@@ -1,3 +1,0 @@
-/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/almu_ubuntu/Escritorio/Uni/Arquitectura/Practica2/SOA/cmake-build-debug/CMakeFiles/Proyecto_soa.dir
