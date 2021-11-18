@@ -52,14 +52,17 @@ void comprobacionColisiones (int& num_objetos, object objetos) {
                 objetos.speed_x[j] = objetos.speed_x[j] + objetos.speed_x[k];
                 objetos.speed_y[j] = objetos.speed_y[j] + objetos.speed_y[k];
                 objetos.speed_z[j] = objetos.speed_z[j] + objetos.speed_z[k];
-                objetos.masa[k] = -1;
-                objetos.speed_x[k] = -1;
-                objetos.speed_y[k] = -1;
 
-                objetos.speed_z[k] = -1;
-                objetos.position_x[k] = -1;
-                objetos.position_y[k] = -1;
-                objetos.position_z[k] = -1;
+                #pragma omp parallel
+                {
+                    objetos.masa[k] = -1;
+                    objetos.speed_x[k] = -1;
+                    objetos.speed_y[k] = -1;
+                    objetos.speed_z[k] = -1;
+                    objetos.position_x[k] = -1;
+                    objetos.position_y[k] = -1;
+                    objetos.position_z[k] = -1;
+                }
 
                 positionsFile << "Body " << k+num_eliminados << " removed" <<endl;
 
@@ -183,9 +186,12 @@ int main(int argc, char *argv[]) {
         objetos.position_x[i] = distUniforme(gen64_soa);
         objetos.position_y[i] = distUniforme(gen64_soa);
         objetos.position_z[i] = distUniforme(gen64_soa);
-        objetos.speed_x[i] = 0;
-        objetos.speed_y[i] = 0;
-        objetos.speed_z[i] = 0;
+        #pragma omp parallel
+        {
+            objetos.speed_x[i] = 0;
+            objetos.speed_y[i] = 0;
+            objetos.speed_z[i] = 0;
+        }
         objetos.masa[i] = distNormal(gen64_soa);
         file_init << fixed << setprecision(3) << "\n" << objetos.position_x[i] << " " << objetos.position_y[i] << " " << objetos.position_z[i] << " " << objetos.speed_x[i] << " " << objetos.speed_y[i] << " " << objetos.speed_z[i] << " " << objetos.masa[i];
     }
@@ -216,7 +222,7 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < num_iteraciones; i++) {
         //ES NECESARIO INICIALIZAR LAS FUERZAS A CERO EN CADA NUEVA ITERACION, PARA QUE NO SE SUMEN LAS FUERZAS DE LAS ITERACIONES ANTERIORES EN NUEVAS ITERACIONES
-
+#pragma omp parallel for
         for (int j = 0; j < num_objetos; j++) {
             fuerza.x[j] = 0;
             fuerza.y[j] = 0;

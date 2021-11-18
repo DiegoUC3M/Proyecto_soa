@@ -46,10 +46,15 @@ vec calcForces(int num_objetos, object objetos, vec forces, int iteration) {
                               ((objetos.position_z[k] - objetos.position_z[j]) *
                                (objetos.position_z[k] - objetos.position_z[j])));
 
-
-                fx = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_x[k] - objetos.position_x[j])) / (norma * norma * norma);//fuerza eje x
-                fy = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_y[k] - objetos.position_y[j])) / (norma * norma * norma);//fuerza eje y
-                fz = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_z[k] - objetos.position_z[j])) / (norma * norma * norma);//fuerza eje z
+#pragma omp parallel
+            {
+                fx = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_x[k] - objetos.position_x[j])) /
+                     (norma * norma * norma);//fuerza eje x
+                fy = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_y[k] - objetos.position_y[j])) /
+                     (norma * norma * norma);//fuerza eje y
+                fz = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_z[k] - objetos.position_z[j])) /
+                     (norma * norma * norma);//fuerza eje z
+            }
 
             //COMO SOBRE UN OBJETO INFLUYE LA FUERZA DEL RESTO DE OBJETOS, VAMOS SUMANDO CONTINUAMENTE LAS FUERZAS QUE SE EJERCEN SOBRE EL OBJETO QUE
             //ESTA SIENDO ITERADO (J), POR ESO SE SUMA EL ANTIGUO VALOR DE LA VARIABLE.
@@ -85,7 +90,7 @@ vec calcAccelerations(int num_objetos,object objetos, vec forces, vec accelerati
     double t1 =omp_get_wtime();
 
 
-
+#pragma omp parallel for
     for (int j = 0; j < num_objetos; j++) {
         accelerations.x[j] = forces.x[j] / objetos.masa[j];//aceleración eje x
         accelerations.y[j] = forces.y[j] / objetos.masa[j];//aceleración eje y
@@ -123,7 +128,7 @@ void calcVelocities (int num_objetos, object objetos, vec accelerations, int ite
 
     //CALCULAMOS TODAS LAS VELOCIDADES ITERANDO SOBRE TODOS LOS OBJETOS
 
-
+#pragma omp parallel for
     for (int j = 0; j < num_objetos; j++) {
 
         objetos.speed_x[j] = objetos.speed_x[j] + (accelerations.x[j] * (incr_tiempo));
@@ -145,6 +150,7 @@ void calcPositions (int num_objetos, object objetos, int iteration, double incr_
 
     positionsFile << "iteración " << iteration << ":" << endl;
 
+#pragma omp parallel for
     for (int j=0;j<num_objetos;j++) {
         objetos.position_x[j] = objetos.position_x[j] + (objetos.speed_x[j] * (incr_tiempo));
         objetos.position_y[j] = objetos.position_y[j] + (objetos.speed_y[j] * (incr_tiempo));
