@@ -90,18 +90,19 @@ vec calcAccelerations(int num_objetos,object objetos, vec forces, vec accelerati
     //double t1 =omp_get_wtime();
 
 
-#pragma omp parallel for
-    for (int j = 0; j < num_objetos; j++) {
-        accelerations.x[j] = forces.x[j] / objetos.masa[j];//aceleración eje x
-        accelerations.y[j] = forces.y[j] / objetos.masa[j];//aceleración eje y
-        accelerations.z[j] = forces.z[j] / objetos.masa[j];//aceleración eje z
+#pragma omp parallel num_threads(16)
+    {
+        for (int j = 0; j < num_objetos; j++) {
+            accelerations.x[j] = forces.x[j] / objetos.masa[j];//aceleración eje x
+            accelerations.y[j] = forces.y[j] / objetos.masa[j];//aceleración eje y
+            accelerations.z[j] = forces.z[j] / objetos.masa[j];//aceleración eje z
 
 #pragma omp critical
-        accelarationFile << "accelaration[" << j << "]: " << accelerations.x[j] << " " << accelerations.y[j] << " "
-                         << accelerations.z[j] << endl;
+            accelarationFile << "accelaration[" << j << "]: " << accelerations.x[j] << " " << accelerations.y[j] << " "
+                             << accelerations.z[j] << endl;
 
+        }
     }
-
 /*
     for (int j = 0; j < num_objetos; j++) {
 
@@ -128,19 +129,21 @@ void calcVelocities (int num_objetos, object objetos, vec accelerations, int ite
 
     //CALCULAMOS TODAS LAS VELOCIDADES ITERANDO SOBRE TODOS LOS OBJETOS
 
-#pragma omp parallel for
-    for (int j = 0; j < num_objetos; j++) {
+#pragma omp parallel num_threads(16)
+    {
+        for (int j = 0; j < num_objetos; j++) {
 
-        objetos.speed_x[j] = objetos.speed_x[j] + (accelerations.x[j] * (incr_tiempo));
-        objetos.speed_y[j] = objetos.speed_y[j] + (accelerations.y[j] * (incr_tiempo));
-        objetos.speed_z[j] = objetos.speed_z[j] + (accelerations.z[j] * (incr_tiempo));
+            objetos.speed_x[j] = objetos.speed_x[j] + (accelerations.x[j] * (incr_tiempo));
+            objetos.speed_y[j] = objetos.speed_y[j] + (accelerations.y[j] * (incr_tiempo));
+            objetos.speed_z[j] = objetos.speed_z[j] + (accelerations.z[j] * (incr_tiempo));
 
 #pragma omp critical
-        velocitiesFile << "speed[" << j << "]: " << objetos.speed_x[j] << " "  << objetos.speed_y[j]  << " "  << objetos.speed_z[j] <<endl;
+            velocitiesFile << "speed[" << j << "]: " << objetos.speed_x[j] << " " << objetos.speed_y[j] << " "
+                           << objetos.speed_z[j] << endl;
 
 
+        }
     }
-
 }
 
 
@@ -151,47 +154,49 @@ void calcPositions (int num_objetos, object objetos, int iteration, double incr_
 
     positionsFile << "iteración " << iteration << ":" << endl;
 
-#pragma omp parallel for
-    for (int j=0;j<num_objetos;j++) {
-        objetos.position_x[j] = objetos.position_x[j] + (objetos.speed_x[j] * (incr_tiempo));
-        objetos.position_y[j] = objetos.position_y[j] + (objetos.speed_y[j] * (incr_tiempo));
-        objetos.position_z[j] = objetos.position_z[j] + (objetos.speed_z[j] * (incr_tiempo));
+#pragma omp parallel num_threads(16)
+    {
+        for (int j = 0; j < num_objetos; j++) {
+            objetos.position_x[j] = objetos.position_x[j] + (objetos.speed_x[j] * (incr_tiempo));
+            objetos.position_y[j] = objetos.position_y[j] + (objetos.speed_y[j] * (incr_tiempo));
+            objetos.position_z[j] = objetos.position_z[j] + (objetos.speed_z[j] * (incr_tiempo));
 
 
 
-        //SI SE SALE UN OBJETO POR EL EJE X
-        if (objetos.position_x[j] <= 0) {
-            objetos.speed_x[j] = -objetos.speed_x[j]; //CAMBIAMOS LA DIRECCION DEL VECTOR VELOCIDAD
-            objetos.position_x[j] = 0;
-        } else if (objetos.position_x[j] >= lado) {
-            objetos.speed_x[j] = -objetos.speed_x[j];
-            objetos.position_x[j] = lado;
-        }
+            //SI SE SALE UN OBJETO POR EL EJE X
+            if (objetos.position_x[j] <= 0) {
+                objetos.speed_x[j] = -objetos.speed_x[j]; //CAMBIAMOS LA DIRECCION DEL VECTOR VELOCIDAD
+                objetos.position_x[j] = 0;
+            } else if (objetos.position_x[j] >= lado) {
+                objetos.speed_x[j] = -objetos.speed_x[j];
+                objetos.position_x[j] = lado;
+            }
 
 
-        //SI SE SALE UN OBJETO POR EL EJE Y
-        if (objetos.position_y[j] <= 0) {
-            objetos.speed_y[j] = -objetos.speed_y[j];
-            objetos.position_y[j] = 0;
-        } else if (objetos.position_y[j] >= lado) {
-            objetos.speed_y[j] = -objetos.speed_y[j];
-            objetos.position_y[j] = lado;
-        }
+            //SI SE SALE UN OBJETO POR EL EJE Y
+            if (objetos.position_y[j] <= 0) {
+                objetos.speed_y[j] = -objetos.speed_y[j];
+                objetos.position_y[j] = 0;
+            } else if (objetos.position_y[j] >= lado) {
+                objetos.speed_y[j] = -objetos.speed_y[j];
+                objetos.position_y[j] = lado;
+            }
 
 
-        //SI SE SALE UN OBJETO POR EL EJE Z
-        if (objetos.position_z[j] <= 0) {
-            objetos.speed_z[j] = -objetos.speed_z[j];
-            objetos.position_z[j] = 0;
-        } else if (objetos.position_z[j] >= lado) {
-            objetos.speed_z[j] = -objetos.speed_z[j];
-            objetos.position_z[j] = lado;
-        }
+            //SI SE SALE UN OBJETO POR EL EJE Z
+            if (objetos.position_z[j] <= 0) {
+                objetos.speed_z[j] = -objetos.speed_z[j];
+                objetos.position_z[j] = 0;
+            } else if (objetos.position_z[j] >= lado) {
+                objetos.speed_z[j] = -objetos.speed_z[j];
+                objetos.position_z[j] = lado;
+            }
 
 #pragma omp critical
-        positionsFile << "positions[" << j << "]: " << objetos.position_x[j] << " "  << objetos.position_y[j]  << " "  << objetos.position_z[j] <<endl;
+            positionsFile << "positions[" << j << "]: " << objetos.position_x[j] << " " << objetos.position_y[j] << " "
+                          << objetos.position_z[j] << endl;
 
 
+        }
     }
-
 }

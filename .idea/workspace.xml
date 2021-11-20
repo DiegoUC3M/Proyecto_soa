@@ -14,7 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="pruebas de paralelizaciones">
+    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="Cambios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/calculations.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sim-soa.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sim-soa.cpp" afterDir="false" />
@@ -104,7 +104,7 @@
       <workItem from="1637172388694" duration="49000" />
       <workItem from="1637173014642" duration="410000" />
       <workItem from="1637254691966" duration="1727000" />
-      <workItem from="1637433100594" duration="2781000" />
+      <workItem from="1637433100594" duration="4602000" />
     </task>
     <task id="LOCAL-00001" summary="pruebas de paralelizaciones">
       <created>1637268381291</created>
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637268381293</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cambios">
+      <created>1637436238188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637436238188</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +140,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pruebas de paralelizaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="pruebas de paralelizaciones" />
+    <MESSAGE value="Cambios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -142,6 +150,11 @@
           <url>file://$PROJECT_DIR$/sim-soa.cpp</url>
           <line>197</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/calculations.cpp</url>
+          <line>176</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

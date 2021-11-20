@@ -215,11 +215,13 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < num_iteraciones; i++) {
         //ES NECESARIO INICIALIZAR LAS FUERZAS A CERO EN CADA NUEVA ITERACION, PARA QUE NO SE SUMEN LAS FUERZAS DE LAS ITERACIONES ANTERIORES EN NUEVAS ITERACIONES
-#pragma omp parallel for
-        for (int j = 0; j < num_objetos; j++) {
-            fuerza.x[j] = 0;
-            fuerza.y[j] = 0;
-            fuerza.z[j] = 0;
+#pragma omp parallel num_threads(16)
+        {
+            for (int j = 0; j < num_objetos; j++) {
+                fuerza.x[j] = 0;
+                fuerza.y[j] = 0;
+                fuerza.z[j] = 0;
+            }
         }
 
         //REALIZAMOS LOS CÁLCULOS Y LA COMPROBACIÓN DE COLISIONES LLAMANDO A LAS FUNCIONES
