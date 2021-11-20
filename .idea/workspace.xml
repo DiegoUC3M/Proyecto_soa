@@ -14,7 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="hola">
+    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="pruebas de paralelizaciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/calculations.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sim-soa.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sim-soa.cpp" afterDir="false" />
@@ -67,11 +67,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -108,8 +103,17 @@
       <workItem from="1637169290579" duration="2611000" />
       <workItem from="1637172388694" duration="49000" />
       <workItem from="1637173014642" duration="410000" />
-      <workItem from="1637254691966" duration="1675000" />
+      <workItem from="1637254691966" duration="1727000" />
+      <workItem from="1637433100594" duration="2781000" />
     </task>
+    <task id="LOCAL-00001" summary="pruebas de paralelizaciones">
+      <created>1637268381291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637268381293</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,12 +131,16 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pruebas de paralelizaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="pruebas de paralelizaciones" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/sim-soa.cpp</url>
-          <line>204</line>
+          <line>197</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
