@@ -13,7 +13,7 @@ extern ofstream positionsFile;
 
 vec calcForces(int num_objetos, object objetos, vec forces, int iteration);
 
-vec calcAccelerations(int num_objetos,object objetos, vec forces, vec accelerations, int iteration);
+vec calcAccelerations(int num_objetos,object objetos, vec forces, vec acelerations, int iteration);
 
 void calcVelocities (int num_objetos, object objetos, vec accelerations, int iteration, double incr_tiempo);
 

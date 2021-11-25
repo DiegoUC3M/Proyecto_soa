@@ -109,9 +109,9 @@ void comprobacionColisiones (int& num_objetos, object objetos) {
 }
 
 
-
+double t1= omp_get_wtime();
 int main(int argc, char *argv[]) {
-
+    omp_set_num_threads(8);
 
     mt19937_64 gen64_soa;
 
@@ -175,16 +175,18 @@ int main(int argc, char *argv[]) {
 
 
 
-
+#pragma omp parallel for
+    for(int i=0; i<num_objetos; i++) {
+        objetos.speed_x[i] = 0;
+        objetos.speed_y[i] = 0;
+        objetos.speed_z[i] = 0;
+    }
 
     //INICIALIZAMOS TODOS LOS OBJETOS
     for(int i=0; i<num_objetos; i++){
         objetos.position_x[i] = distUniforme(gen64_soa);
         objetos.position_y[i] = distUniforme(gen64_soa);
         objetos.position_z[i] = distUniforme(gen64_soa);
-        objetos.speed_x[i] = 0;
-        objetos.speed_y[i] = 0;
-        objetos.speed_z[i] = 0;
         objetos.masa[i] = distNormal(gen64_soa);
         file_init << fixed << setprecision(3) << "\n" << objetos.position_x[i] << " " << objetos.position_y[i] << " " << objetos.position_z[i] << " " << objetos.speed_x[i] << " " << objetos.speed_y[i] << " " << objetos.speed_z[i] << " " << objetos.masa[i];
     }
@@ -215,20 +217,18 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < num_iteraciones; i++) {
         //ES NECESARIO INICIALIZAR LAS FUERZAS A CERO EN CADA NUEVA ITERACION, PARA QUE NO SE SUMEN LAS FUERZAS DE LAS ITERACIONES ANTERIORES EN NUEVAS ITERACIONES
-#pragma omp parallel num_threads(16)
-        {
-            for (int j = 0; j < num_objetos; j++) {
-                fuerza.x[j] = 0;
-                fuerza.y[j] = 0;
-                fuerza.z[j] = 0;
-            }
+#pragma omp parallel for
+        for (int j = 0; j < num_objetos; j++) {
+            fuerza.x[j] = 0;
+            fuerza.y[j] = 0;
+            fuerza.z[j] = 0;
         }
 
         //REALIZAMOS LOS CÁLCULOS Y LA COMPROBACIÓN DE COLISIONES LLAMANDO A LAS FUNCIONES
-        fuerza = calcForces(num_objetos,objetos, fuerza, i);
-        aceleracion = calcAccelerations(num_objetos,objetos,fuerza,aceleracion, i);
-        calcVelocities(num_objetos,objetos,aceleracion,i, incr_tiempo);
-        calcPositions(num_objetos,objetos,i,incr_tiempo,lado);
+        fuerza = calcForces(num_objetos, objetos, fuerza, i);
+        aceleracion = calcAccelerations(num_objetos, objetos, fuerza, aceleracion, i);
+        calcVelocities(num_objetos, objetos, aceleracion, i, incr_tiempo);
+        calcPositions(num_objetos, objetos, i, incr_tiempo, lado);
 
         comprobacionColisiones(num_objetos,objetos);
 
@@ -271,6 +271,9 @@ int main(int argc, char *argv[]) {
     free(aceleracion.x);
     free(aceleracion.y);
     free(aceleracion.z);
+
+    double t2=omp_get_wtime();
+    cout << t2-t1;
 
     return 0;
 }

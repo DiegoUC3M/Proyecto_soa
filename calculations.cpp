@@ -5,6 +5,7 @@
 #include <cmath>
 #include <iomanip>
 #include <omp.h>
+#include <vector>
 #include "sim-soa.hpp"
 #include "calculations.hpp"
 
@@ -33,7 +34,6 @@ vec calcForces(int num_objetos, object objetos, vec forces, int iteration) {
 
     //HACE EL CALCULO DE UN SOLO OBJETO CON EL DEL RESTO DE OBJETOS. POR ELLO SE QUEDA EN UN OBJETO CON EL PRIMER BUCLE (POSICION J) E ITERA
     //SOBRE EL RESTO DE OBJETOS (POSICION K)
-
     for (int j = 0; j < num_objetos; j++) {
 
         for (int k = j + 1; k < num_objetos; k++) {
@@ -47,17 +47,12 @@ vec calcForces(int num_objetos, object objetos, vec forces, int iteration) {
                               ((objetos.position_z[k] - objetos.position_z[j]) *
                                (objetos.position_z[k] - objetos.position_z[j])));
 
-
-            fx = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_x[k] - objetos.position_x[j])) /
-                 (norma * norma * norma);//fuerza eje x
-            fy = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_y[k] - objetos.position_y[j])) /
-                 (norma * norma * norma);//fuerza eje y
-            fz = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_z[k] - objetos.position_z[j])) /
-                 (norma * norma * norma);//fuerza eje z
+            fx = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_x[k] - objetos.position_x[j])) / (norma * norma * norma);//fuerza eje x
+            fy = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_y[k] - objetos.position_y[j])) / (norma * norma * norma);//fuerza eje y
+            fz = (((G * objetos.masa[k]) * objetos.masa[j]) * (objetos.position_z[k] - objetos.position_z[j])) / (norma * norma * norma);//fuerza eje z
 
             //COMO SOBRE UN OBJETO INFLUYE LA FUERZA DEL RESTO DE OBJETOS, VAMOS SUMANDO CONTINUAMENTE LAS FUERZAS QUE SE EJERCEN SOBRE EL OBJETO QUE
             //ESTA SIENDO ITERADO (J), POR ESO SE SUMA EL ANTIGUO VALOR DE LA VARIABLE.
-
             forces.x[j] = forces.x[j] + fx;
             forces.y[j] = forces.y[j] + fy;
             forces.z[j] = forces.z[j] + fz;
@@ -90,19 +85,19 @@ vec calcAccelerations(int num_objetos,object objetos, vec forces, vec accelerati
     //double t1 =omp_get_wtime();
 
 
-#pragma omp parallel num_threads(16)
-    {
-        for (int j = 0; j < num_objetos; j++) {
-            accelerations.x[j] = forces.x[j] / objetos.masa[j];//aceleración eje x
-            accelerations.y[j] = forces.y[j] / objetos.masa[j];//aceleración eje y
-            accelerations.z[j] = forces.z[j] / objetos.masa[j];//aceleración eje z
 
-#pragma omp critical
-            accelarationFile << "accelaration[" << j << "]: " << accelerations.x[j] << " " << accelerations.y[j] << " "
-                             << accelerations.z[j] << endl;
+#pragma omp parallel for
+    for (int j = 0; j < num_objetos; j++) {
+        accelerations.x[j] = forces.x[j] / objetos.masa[j];//aceleración eje x
+        accelerations.y[j] = forces.y[j] / objetos.masa[j];//aceleración eje y
+        accelerations.z[j] = forces.z[j] / objetos.masa[j];//aceleración eje z
 
-        }
+
+        accelarationFile << "accelaration[" << j << "]: " << accelerations.x[j] << " " << accelerations.y[j] << " "
+                         << accelerations.z[j] << endl;
+
     }
+
 /*
     for (int j = 0; j < num_objetos; j++) {
 
@@ -129,21 +124,21 @@ void calcVelocities (int num_objetos, object objetos, vec accelerations, int ite
 
     //CALCULAMOS TODAS LAS VELOCIDADES ITERANDO SOBRE TODOS LOS OBJETOS
 
-#pragma omp parallel num_threads(16)
-    {
-        for (int j = 0; j < num_objetos; j++) {
 
-            objetos.speed_x[j] = objetos.speed_x[j] + (accelerations.x[j] * (incr_tiempo));
-            objetos.speed_y[j] = objetos.speed_y[j] + (accelerations.y[j] * (incr_tiempo));
-            objetos.speed_z[j] = objetos.speed_z[j] + (accelerations.z[j] * (incr_tiempo));
+#pragma omp parallel for
+    for (int j = 0; j < num_objetos; j++) {
 
-#pragma omp critical
-            velocitiesFile << "speed[" << j << "]: " << objetos.speed_x[j] << " " << objetos.speed_y[j] << " "
-                           << objetos.speed_z[j] << endl;
+        objetos.speed_x[j] = objetos.speed_x[j] + (accelerations.x[j] * (incr_tiempo));
+        objetos.speed_y[j] = objetos.speed_y[j] + (accelerations.y[j] * (incr_tiempo));
+        objetos.speed_z[j] = objetos.speed_z[j] + (accelerations.z[j] * (incr_tiempo));
 
 
-        }
+        velocitiesFile << "speed[" << j << "]: " << objetos.speed_x[j] << " " << objetos.speed_y[j] << " "
+                       << objetos.speed_z[j] << endl;
+
+
     }
+
 }
 
 
@@ -154,49 +149,49 @@ void calcPositions (int num_objetos, object objetos, int iteration, double incr_
 
     positionsFile << "iteración " << iteration << ":" << endl;
 
-#pragma omp parallel num_threads(16)
-    {
-        for (int j = 0; j < num_objetos; j++) {
-            objetos.position_x[j] = objetos.position_x[j] + (objetos.speed_x[j] * (incr_tiempo));
-            objetos.position_y[j] = objetos.position_y[j] + (objetos.speed_y[j] * (incr_tiempo));
-            objetos.position_z[j] = objetos.position_z[j] + (objetos.speed_z[j] * (incr_tiempo));
+
+#pragma omp parallel for
+    for (int j = 0; j < num_objetos; j++) {
+        objetos.position_x[j] = objetos.position_x[j] + (objetos.speed_x[j] * (incr_tiempo));
+        objetos.position_y[j] = objetos.position_y[j] + (objetos.speed_y[j] * (incr_tiempo));
+        objetos.position_z[j] = objetos.position_z[j] + (objetos.speed_z[j] * (incr_tiempo));
 
 
 
-            //SI SE SALE UN OBJETO POR EL EJE X
-            if (objetos.position_x[j] <= 0) {
-                objetos.speed_x[j] = -objetos.speed_x[j]; //CAMBIAMOS LA DIRECCION DEL VECTOR VELOCIDAD
-                objetos.position_x[j] = 0;
-            } else if (objetos.position_x[j] >= lado) {
-                objetos.speed_x[j] = -objetos.speed_x[j];
-                objetos.position_x[j] = lado;
-            }
-
-
-            //SI SE SALE UN OBJETO POR EL EJE Y
-            if (objetos.position_y[j] <= 0) {
-                objetos.speed_y[j] = -objetos.speed_y[j];
-                objetos.position_y[j] = 0;
-            } else if (objetos.position_y[j] >= lado) {
-                objetos.speed_y[j] = -objetos.speed_y[j];
-                objetos.position_y[j] = lado;
-            }
-
-
-            //SI SE SALE UN OBJETO POR EL EJE Z
-            if (objetos.position_z[j] <= 0) {
-                objetos.speed_z[j] = -objetos.speed_z[j];
-                objetos.position_z[j] = 0;
-            } else if (objetos.position_z[j] >= lado) {
-                objetos.speed_z[j] = -objetos.speed_z[j];
-                objetos.position_z[j] = lado;
-            }
-
-#pragma omp critical
-            positionsFile << "positions[" << j << "]: " << objetos.position_x[j] << " " << objetos.position_y[j] << " "
-                          << objetos.position_z[j] << endl;
-
-
+        //SI SE SALE UN OBJETO POR EL EJE X
+        if (objetos.position_x[j] <= 0) {
+            objetos.speed_x[j] = -objetos.speed_x[j]; //CAMBIAMOS LA DIRECCION DEL VECTOR VELOCIDAD
+            objetos.position_x[j] = 0;
+        } else if (objetos.position_x[j] >= lado) {
+            objetos.speed_x[j] = -objetos.speed_x[j];
+            objetos.position_x[j] = lado;
         }
+
+
+        //SI SE SALE UN OBJETO POR EL EJE Y
+        if (objetos.position_y[j] <= 0) {
+            objetos.speed_y[j] = -objetos.speed_y[j];
+            objetos.position_y[j] = 0;
+        } else if (objetos.position_y[j] >= lado) {
+            objetos.speed_y[j] = -objetos.speed_y[j];
+            objetos.position_y[j] = lado;
+        }
+
+
+        //SI SE SALE UN OBJETO POR EL EJE Z
+        if (objetos.position_z[j] <= 0) {
+            objetos.speed_z[j] = -objetos.speed_z[j];
+            objetos.position_z[j] = 0;
+        } else if (objetos.position_z[j] >= lado) {
+            objetos.speed_z[j] = -objetos.speed_z[j];
+            objetos.position_z[j] = lado;
+        }
+
+
+        positionsFile << "positions[" << j << "]: " << objetos.position_x[j] << " " << objetos.position_y[j] << " "
+                      << objetos.position_z[j] << endl;
+
+
     }
+
 }

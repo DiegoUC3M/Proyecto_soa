@@ -14,9 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="Cambios">
+    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="Para modificar los hilos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/calculations.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculations.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/calculations.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sim-soa.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sim-soa.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +31,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -54,22 +56,17 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="ObjectiveC" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Proyecto_aos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Practica/Proyecto bueno/Proyecto_soa" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
-    <configuration name="Proyecto_soa" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="1000 50 7000 536 0.1" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_soa" TARGET_NAME="Proyecto_soa" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="Proyecto_soa" RUN_TARGET_NAME="Proyecto_soa">
+    <configuration name="Proyecto_soa" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="4000 250 536 7000 0.1" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_soa" TARGET_NAME="Proyecto_soa" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="Proyecto_soa" RUN_TARGET_NAME="Proyecto_soa">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -104,7 +101,14 @@
       <workItem from="1637172388694" duration="49000" />
       <workItem from="1637173014642" duration="410000" />
       <workItem from="1637254691966" duration="1727000" />
-      <workItem from="1637433100594" duration="4602000" />
+      <workItem from="1637433100594" duration="5481000" />
+      <workItem from="1637584490092" duration="355000" />
+      <workItem from="1637585185807" duration="1226000" />
+      <workItem from="1637587008225" duration="1040000" />
+      <workItem from="1637602168413" duration="7074000" />
+      <workItem from="1637613422001" duration="772000" />
+      <workItem from="1637614269567" duration="2287000" />
+      <workItem from="1637839038791" duration="4053000" />
     </task>
     <task id="LOCAL-00001" summary="pruebas de paralelizaciones">
       <created>1637268381291</created>
@@ -120,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637436238188</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Para modificar los hilos">
+      <created>1637438938003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637438938003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,20 +152,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pruebas de paralelizaciones" />
     <MESSAGE value="Cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios" />
+    <MESSAGE value="Para modificar los hilos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Para modificar los hilos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/sim-soa.cpp</url>
-          <line>197</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/calculations.cpp</url>
+          <line>196</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/calculations.cpp</url>
-          <line>176</line>
-          <option name="timeStamp" value="2" />
+          <line>98</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -174,5 +186,9 @@
         <watch expression="objetos.masa[j]" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
