@@ -14,7 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="VERSION BIEN">
+    <list default="true" id="33389793-a897-40cd-85dd-e5b0877fcbe1" name="Changes" comment="paralelizada con calculations, sin paralelizacion en forces y quitando los ficheros">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/calculations.cpp" afterDir="false" />
     </list>
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637438938003</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="paralelizada con calculations, sin paralelizacion en forces y quitando los ficheros">
+      <created>1637922978035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637922978035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,19 +180,21 @@
     <MESSAGE value="pruebas de paralelizaciones" />
     <MESSAGE value="Cambios" />
     <MESSAGE value="Para modificar los hilos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Para modificar los hilos" />
+    <MESSAGE value="VERSION BIEN" />
+    <MESSAGE value="paralelizada con calculations, sin paralelizacion en forces y quitando los ficheros" />
+    <option name="LAST_COMMIT_MESSAGE" value="paralelizada con calculations, sin paralelizacion en forces y quitando los ficheros" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/calculations.cpp</url>
-          <line>192</line>
+          <line>162</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/calculations.cpp</url>
-          <line>98</line>
+          <line>84</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

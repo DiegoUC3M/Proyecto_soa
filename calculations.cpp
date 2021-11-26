@@ -70,7 +70,7 @@ vec calcForces(int num_objetos, object objetos, vec forces, int iteration) {
 
 
 //HACEMOS EL CALCULO DE LAS ACELERACIONES
-vec calcAccelerations(int num_objetos,object objetos, vec forces, vec accelerations, int iteration) {
+vec calcAccelerations(int num_objetos,object objetos, vec forces, vec accelerations) {
 
     //CALCULAMOS TODAS LAS ACELERACION ITERANDO SOBRE TODOS LOS OBJETOS
 
@@ -93,7 +93,7 @@ vec calcAccelerations(int num_objetos,object objetos, vec forces, vec accelerati
 
 
 //HACEMOS EL CALCULO DE LAS VELOCIDADES
-void calcVelocities (int num_objetos, object objetos, vec accelerations, int iteration, double incr_tiempo) {
+void calcVelocities (int num_objetos, object objetos, vec accelerations, double incr_tiempo) {
 
 
 
@@ -116,7 +116,7 @@ void calcVelocities (int num_objetos, object objetos, vec accelerations, int ite
 
 
 //HACEMOS EL CALCULO DE LAS POSICIONES
-void calcPositions (int num_objetos, object objetos, int iteration, double incr_tiempo, double lado) {
+void calcPositions (int num_objetos, object objetos, double incr_tiempo, double lado) {
 
 
 

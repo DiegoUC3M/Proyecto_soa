@@ -211,9 +211,9 @@ int main(int argc, char *argv[]) {
 
         //REALIZAMOS LOS CÁLCULOS Y LA COMPROBACIÓN DE COLISIONES LLAMANDO A LAS FUNCIONES
         fuerza = calcForces(num_objetos, objetos, fuerza, i);
-        aceleracion = calcAccelerations(num_objetos, objetos, fuerza, aceleracion, i);
-        calcVelocities(num_objetos, objetos, aceleracion, i, incr_tiempo);
-        calcPositions(num_objetos, objetos, i, incr_tiempo, lado);
+        aceleracion = calcAccelerations(num_objetos, objetos, fuerza, aceleracion);
+        calcVelocities(num_objetos, objetos, aceleracion,incr_tiempo);
+        calcPositions(num_objetos, objetos, incr_tiempo, lado);
 
         comprobacionColisiones(num_objetos,objetos);
 
