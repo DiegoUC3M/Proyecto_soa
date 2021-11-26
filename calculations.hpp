@@ -7,9 +7,6 @@
 #include <fstream>
 
 extern ofstream forcesFile;
-extern ofstream accelarationFile;
-extern ofstream velocitiesFile;
-extern ofstream positionsFile;
 
 vec calcForces(int num_objetos, object objetos, vec forces, int iteration);
 

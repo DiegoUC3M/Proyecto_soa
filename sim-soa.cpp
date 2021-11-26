@@ -42,11 +42,6 @@ void comprobacionColisiones (int& num_objetos, object objetos) {
 
             if (norma < 1) {//si su distancia es menor que la unidad
 
-                //ESCRIBIMOS LAS COLISIONES EN EL TXT DE POSITIONS
-                positionsFile << "Collapsing objects " << j << " and " << k+num_eliminados<< endl;
-                positionsFile << "Body " << j << ": " << objetos.position_x[j] << " " << objetos.position_y[j] << " " << objetos.position_z[j] << " " << objetos.speed_x[j] << " " << objetos.speed_y[j] << " " << objetos.speed_z[j] << " " << objetos.masa[j] << endl;
-                positionsFile << "Body " << k+num_eliminados << ": " << objetos.position_x[k] << " " << objetos.position_y[k] << " " << objetos.position_z[k] << " " << objetos.speed_x[k] << " " << objetos.speed_y[k] << " " << objetos.speed_z[k] << " " << objetos.masa[k] << endl;
-
                 //SUMAMOS LAS MASAS Y VELOCIDADES DE LOS OBJETOS J Y K Y ELIMINAMOS EL SEGUNDO OBJETO (ASIGNANDO VALORES -1)
                 objetos.masa[j] = objetos.masa[j] + objetos.masa[k];
                 objetos.speed_x[j] = objetos.speed_x[j] + objetos.speed_x[k];
@@ -59,8 +54,6 @@ void comprobacionColisiones (int& num_objetos, object objetos) {
                 objetos.position_x[k] = -1;
                 objetos.position_y[k] = -1;
                 objetos.position_z[k] = -1;
-
-                positionsFile << "Body " << k+num_eliminados << " removed" <<endl;
 
 
                 //ELIMINAMOS LOS OBJETOS MOVIÉNDOLOS AL FINAL DEL ARRAY, PARA QUE AL PRINCIPIO SOLO ESTÉN LOS NO COLISIONADOS
@@ -93,11 +86,6 @@ void comprobacionColisiones (int& num_objetos, object objetos) {
 
                 }
                 num_eliminados++;
-
-                positionsFile << "Body " << j << " after collapse" <<endl;
-                positionsFile << "Body " << j << ": " << objetos.position_x[j] << " " << objetos.position_y[j] << " " << objetos.position_z[j] << " " << objetos.speed_x[j] << " " << objetos.speed_y[j] << " " << objetos.speed_z[j] << " " << objetos.masa[j] << endl << endl;
-
-
                 num_objetos = num_objetos - 1;
 
             }
@@ -205,9 +193,6 @@ int main(int argc, char *argv[]) {
 
     //ABRIMOS TODOS LOS ARCHIVOS TXT PARA PROCEDER A MODIFICARLOS
     forcesFile.open("forces.txt");
-    accelarationFile.open("accelaration.txt");
-    velocitiesFile.open("velocities.txt");
-    positionsFile.open("positions.txt");
 
 
 
@@ -240,9 +225,6 @@ int main(int argc, char *argv[]) {
 
     //CERRAMOS TODOS LOS ARCHIVOS TXT
     forcesFile.close();
-    accelarationFile.close();
-    velocitiesFile.close();
-    positionsFile.close();
 
 
     //ESCRIBIMOS EL ARCHIVO FILE_FINAL, QUE TIENE LAS POSICIONES, VELOCIDADES Y MASAS DE LOS OBJETOS QUE QUEDAN AL FINAL AL NO HABER COLISIONADO
